@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap"
+    rel="stylesheet"/>
+    <script
+    src="https://kit.fontawesome.com/76c520c108.js"
+    crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/basic.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Register/Login Page</title>
+</head>
+<body>
+    <!-- <p></p> -->
+    <div class="container">
+        <div class="inner-container">
+            <div class="options">
+                <div class="option">
+                    <p>Login</p>
+                </div>
+                <div class="option">
+                    <p>Register</p>
+                </div>
+            </div>
+
+            <div class="login">
+                <form action="{% url 'validate_login' %}" method="post" autocomplete="off">
+                    {% csrf_token %}
+                    <div class="details">
+                      <div class="key"><i class="fas fa-user"></i></div>
+                      <div class="value">
+                        <input
+                        autocomplete="off"
+                          type="text"
+                          placeholder="Username"
+                          name="username"
+                          id="username"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="details">
+                      <div class="key"><i class="fas fa-key"></i></div>
+                      <div class="value">
+                        <input
+                        autocomplete="off"
+                          type="password"
+                          placeholder="Password"
+                          name="password"
+                          id="password"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {% if error %}
+                    <div class="details">
+                          <p>{{ error }}</p>
+                    </div>
+                    {% endif %}
+                    <div class="details">
+                      <button type="submit">Verify</button>
+                    </div>
+                  </form>
+            </div>
+            <div class="register hide">
+              <form id="register-form" action="{% url 'register' %}" method="post" autocomplete="off">
+                  {% csrf_token %}
+                  <div class="details">
+                    <div class="key"><i class="fas fa-user"></i></div>
+                    <div class="value">
+                      <input
+                      autocomplete="off"
+                        type="text"
+                        placeholder="Username"
+                        name="username-register"
+                        id="username-register"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="details nouser">
+                    <p></p>
+                  </div>
+                  <div class="details">
+                    <div class="key"><i class="fas fa-key"></i></div>
+                    <div class="value">
+                      <input
+                      autocomplete="off"
+                        type="password"
+                        placeholder="Password"
+                        name="password-register"
+                        id="password-register"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="key"><i class="fas fa-key"></i></div>
+                    <div class="value">
+                      <input
+                      autocomplete="off"
+                        type="password"
+                        placeholder="Re-enter Password"
+                        name="re-password"
+                        id="re-password"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <!-- {% if error %}
+                  <div class="details">
+                        <p>{{ error }}</p>
+                  </div>
+                  {% endif %} -->
+                  <div class="details nomargin">
+                    <p></p>
+                  </div>
+                  <div class="details">
+                    <button id="register-button" type="submit">Register</button>
+                  </div>
+                </form>
+          </div>
+
+        </div>
+    </div>
+    <script src="{% static 'javascript/basic.js' %}"></script>
+</body>
+</html>

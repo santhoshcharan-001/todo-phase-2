@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../images/bg-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Style Script', cursive;
+    height: 100vh;
+  }
+.container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+}
+.inner-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 450px;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 90%;
+    min-height: 30vh;
+    max-height: 80vh;
+}
+.options{
+    
+    display: flex;
+    width: 200px;
+    justify-content:center;
+    align-items: center;
+}
+.options{
+    cursor: pointer;
+    /* background-color: #fff; */
+    color: #000;
+
+}
+.option{
+    background-color: #fff;
+}
+.option:first-child{
+    padding: 0.3rem 1rem;
+    border: 1px solid #000;
+    border-right: 0px;
+    font-size: 20px;
+    border-radius: 5px 0px 0px 0px;
+}
+.option:last-child{
+    padding: 0.3rem 1rem;
+    border: 1px solid #000;
+    font-size: 20px;
+    border-radius: 0px 5px 0px 0px;
+}
+form{
+    background-color: #fff;
+    padding: 1rem;
+    /* opacity: 0.5; */
+    border-radius: 0 5px 5px 5px;
+}
+.login{
+    margin-left: 23.5px;
+}
+.register{
+    margin-left: 23.5px;
+}
+form .details {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    margin: 1rem 0;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+  }
+  .details .key {
+  border-top-left-radius: 5px;
+  border: 0;
+  outline: 0;
+  border-bottom-left-radius: 5px;
+  padding: 0.5rem 1rem;
+  background-color: gold;
+}
+.details .value {
+  width: 55%;
+  /* border: 0.4px solid #000;
+  border-left: 0px; */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* .value input{
+
+} */
+.details input {
+  width: 100%;
+  font-family: "Klee One", cursive;
+  font-size: 16px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0.5rem;
+  transform: translateY(0.1px);
+  outline: 0;
+  border: 0.2px solid rgba(0, 0, 0, 0.304);
+  border-left: 0;
+}
+.key i {
+  color: black;
+}
+.details button {
+  text-align: center;
+  padding: 0.1rem 1rem 0.2rem;
+  width: 100px;
+  background-color: gold;
+  font-weight: bold;
+  font-family: "Klee One", cursive;
+  cursor: pointer;
+  outline: 0;
+  font-size: 18px;
+  border: 0;
+  border-radius: 5px;
+}
+.details h1 {
+  font-weight: bold;
+  font-family: "Klee One", cursive;
+  color: #fff;
+  text-align: center;
+}
+.details p{
+  color:red;
+  font-size: 12px;
+  font-family: "Klee One", cursive;
+  font-weight: bold;
+  text-align: center;
+}
+input[type="text"], input[type="password"] {
+
+  background-color: rgb(232, 240, 254), rgba(70, 90, 126, 0.4) !important;
+    color: black, white !important;
+
+}
+.nomargin{
+  margin: 0;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+}
+.nouser{
+  margin: 0;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+}
+.nomargin p{
+  font-size: 14px;
+}
+.nouser p{
+  font-size: 14px;
+}
+.hide{
+  display:none !important;
+}
