@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+29uvb^om=mrwv9ffl_&z@a($sb&nuumh!1ei=&0@rb38q!^z3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','plan-your-tasks.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','plantasks.herokuapp.com']
 
 
 # Application definition
@@ -136,6 +136,6 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
-# import os
+import os
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
